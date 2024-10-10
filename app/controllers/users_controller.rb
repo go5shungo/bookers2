@@ -15,6 +15,13 @@ class UsersController < ApplicationController
   end
   
   def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:notice] = "You have update book success"
+      redirect_to user_path(@user.id)
+    else
+      render :edit
+    end
   end
   
   private
