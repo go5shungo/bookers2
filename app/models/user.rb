@@ -11,9 +11,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
-          def get_profile_image(width,height)
+  def get_profile_image(width,height)
     unless profile_image.attached?
-      file_path = Rails.root.join('app/assets/images/default-image.jpg')
+      file_path = Rails.root.join('app/assets/images/no-image.jpg')
     end
     profile_image.variant(resize_to_limit: [width, height]).processed
   end
