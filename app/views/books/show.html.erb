@@ -1,1 +1,23 @@
 <%= render 'list', user: @user, book: @book %>
+
+<div class = "col-md-8 offset-md-1" >
+  <h1>Book　detail</h1>
+  <table class = "table">
+    <tbody>
+      <tr>
+        <td>
+          <%= link_to user_path(@other_book.user.id) do %>
+          <% end %>
+        </td>
+        <td>
+          <%= @other_book.title %></td>
+          <td>
+          <%= @other_book.body %></td>
+          <% if @other_book.user == current_user %>
+          <td><%= link_to "Edit",edit_book_path(@other_book.id),class: 'btn btn-sm btn-success' %></td>
+          <td><%= link_to "Destroy",book_path(@other_book.id), method: :delete, "data-confirm"=>"本当に削除しますか？",class: 'btn btn-sm btn-success' %></td>
+          <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
