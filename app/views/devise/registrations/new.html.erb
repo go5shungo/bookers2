@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<div class = "container">
+  <div class = "row">
+    
+ <h2>Sign up</h2>
 
   <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user' do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -32,3 +35,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+ </div>
+</div>
