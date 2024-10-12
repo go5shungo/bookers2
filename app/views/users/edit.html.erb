@@ -15,17 +15,17 @@
         <% end %>
         <%= form_with model: @user do |f| %>
         <div class="form-group">
-          <%= f.label :Name %><br>
-          <%= f.text_field :Name, class: 'form-control' %>
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: 'form-control' %>
           
           <div class="form-group">
-          <%= f.label :Image%><br>
-          <%= f.file_field :Image, accept:"image/*" %>
+          <%= f.label :profile_image%><br>
+          <%= f.file_field :profile_image, accept:"image/*" %>
         </div>
         
        <div class="form-group">
-          <%= f.label :Introduction %><br>
-          <%= f.text_field :Introduction, class: 'form-control' %>
+          <%= f.label :introduction %><br>
+          <%= f.text_field :introduction, class: 'form-control' %>
           
         </div>
         <div class="form-group">
