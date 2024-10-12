@@ -2,6 +2,11 @@
   <div class = "row">
     <div class = "col-md-3">
       <h1>User info</h1>
+      <% if user.profile_image.attached? %>
+      <%= image_tag current_user.profile_image, size: "100,100"  %>
+      <% else %>
+       <%= image_tag 'no_image', size: "100,100" %>
+       <% end %>
       <table class = "table">
         <tbody>
           <tr>
