@@ -11,6 +11,8 @@
       <tr>
         <td>
           <%= link_to user_path(@other_book.user.id) do %>
+          <%= image_tag @other_book.user.profile_image, size: "100,100"  %><br>
+          <%= @other_book.user.name %>
           <% end %>
         </td>
         <td>

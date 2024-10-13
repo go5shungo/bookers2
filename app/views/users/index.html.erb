@@ -17,7 +17,7 @@
     <tbody>
       <% @users.each do |user| %>
       <tr>
-        <td></td>
+        <td><%= image_tag user.profile_image, size: "100,100"  %></td>
         <td><%= user.name %></td>
         <td>
           <%= link_to "Show", user_path(user.id) %>
